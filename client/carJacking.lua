@@ -176,12 +176,15 @@ function GetVehicleDescription(vehicle)
         return "unknown vehicle"
     end
 
+    local model = GetDisplayNameFromVehicleModel(GetEntityModel(vehicle))
+    if model == 'CARNOTFOUND' then model = 'unknown model' end
+
     local plate = GetVehicleNumberPlateText(vehicle)
-    local class = GetVehicleClass(vehicle)
 
     local primary, _ = GetVehicleColours(vehicle)
     local colorDescription = colorNames[primary]
 
+    local class = GetVehicleClass(vehicle)
     local classDescriptions = {
         "Compact", "Sedan", "SUV", "Coupe", "Muscle", "Sports", "Super", "Motorcycles",
         "Off-road", "Industrial", "Utility", "Vans", "Cycles", "Boats", "Helicopters",
@@ -189,7 +192,7 @@ function GetVehicleDescription(vehicle)
     }
     local classDescription = classDescriptions[class] or "Unknown"
 
-    return string.format("%s type vehicle with the plate '%s' of color %s", classDescription, plate, colorDescription)
+    return ("%s with the plate '%s' of color %s"):format(model, plate, colorDescription)
 end
 
 
