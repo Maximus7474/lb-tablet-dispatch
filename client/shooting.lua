@@ -15,7 +15,10 @@ local Config = {
 
     weaponCode = {
         default = "10-13"
-    }
+    },
+
+    copsCanTrigger = true,
+    policeJobs = {"police"},
 }
 
 local WeaponNames = {
@@ -53,6 +56,8 @@ local WeaponNames = {
 
 AddEventHandler('CEventGunShot', function (hits)
     --[[ hits: string[] -- entities hit by the bullet ? ]]
+
+    if not Config.copsCanTrigger and HasJob(Config.policeJobs) then return end
 
     local playerPed = PlayerPedId()
 
