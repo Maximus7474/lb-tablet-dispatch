@@ -18,5 +18,13 @@ RegisterNetEvent('tablet:dispatch:triggerDispatch', function (data)
 
     if not canTriggerDispatch(src) then return end
 
-    exports['lb-tablet']:AddDispatch(data)
+    if type(data.job) == "string" then return exports['lb-tablet']:AddDispatch(data) end
+
+    if type(data.job) == "table" then
+        for i = 1, #data.job do
+            local nData = data
+            nData.job = data.job[i]
+            exports['lb-tablet']:AddDispatch(nData)
+        end
+    end
 end)
