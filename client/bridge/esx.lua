@@ -1,10 +1,6 @@
-local ESX = exports.es_extended:getSharedObject()
+if not IsResourceValid('es_extended') then return end
 
----Get the player's character identifier
----@return string|nil
-function GetIdentifier()
-    return ESX.PlayerData.identifier
-end
+local ESX = exports.es_extended:getSharedObject()
 
 ---Check if player has a job in the list of jobs
 ---@param jobs string[]|string
