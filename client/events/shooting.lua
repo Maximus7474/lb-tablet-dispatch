@@ -6,6 +6,8 @@ local GetGameTimer = GetGameTimer
 local Config = {
     delay = 30, -- in seconds
 
+    percentage = 50, -- percent chance the police should be notified
+
     excludedWeapons = { -- Won't trigger notifications
         [`WEAPON_STUNGUN`] = true,
         [`WEAPON_STUNGUN_MP`] = true,
@@ -66,6 +68,9 @@ AddEventHandler('CEventGunShot', function (hits)
 
     local gametime = GetGameTimer()
     if lastshot > gametime then return end
+
+    if not ShouldNotify(Config.percentage) then return end
+
     lastshot = gametime + timeout
 
     if Config.excludedWeapons[weaponHash] then return end

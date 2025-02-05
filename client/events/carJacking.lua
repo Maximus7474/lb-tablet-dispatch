@@ -5,6 +5,8 @@ local GetGameTimer = GetGameTimer
 
 local Config = {
     delay = 10, -- in seconds
+
+    percentage = 10, -- percent chance that the police are informed
 }
 
 local colorNames = {
@@ -184,13 +186,13 @@ function GetVehicleDescription(vehicle)
     local primary, _ = GetVehicleColours(vehicle)
     local colorDescription = colorNames[primary]
 
-    local class = GetVehicleClass(vehicle)
-    local classDescriptions = {
-        "Compact", "Sedan", "SUV", "Coupe", "Muscle", "Sports", "Super", "Motorcycles",
-        "Off-road", "Industrial", "Utility", "Vans", "Cycles", "Boats", "Helicopters",
-        "Planes", "Service", "Emergency", "Military", "Commercial"
-    }
-    local classDescription = classDescriptions[class] or "Unknown"
+    -- local class = GetVehicleClass(vehicle)
+    -- local classDescriptions = {
+    --     "Compact", "Sedan", "SUV", "Coupe", "Muscle", "Sports", "Super", "Motorcycles",
+    --     "Off-road", "Industrial", "Utility", "Vans", "Cycles", "Boats", "Helicopters",
+    --     "Planes", "Service", "Emergency", "Military", "Commercial"
+    -- }
+    -- local classDescription = classDescriptions[class] or "Unknown"
 
     return ("%s with the plate '%s' of color %s"):format(model, plate, colorDescription)
 end
@@ -201,6 +203,9 @@ AddEventHandler('CEventDraggedOutCar', function (victim)
 
     local gametime = GetGameTimer()
     if lastcarjack > gametime then return end
+
+    if not ShouldNotify(Config.percentage) then return end
+
     lastcarjack = gametime + timeout
 
     local playerPed = PlayerPedId()
