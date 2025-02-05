@@ -11,3 +11,11 @@ function GetStreetAndAreaFromCoords(coords)
 
     return streetName, areaName
 end
+
+---Get if resource exists and is running
+---@param resource string Resource to check
+---@return boolean isrunning Is the resource running
+function IsResourceValid(resource)
+    local state = GetResourceState(resource)
+    return state == "started" or state == "starting"
+end
