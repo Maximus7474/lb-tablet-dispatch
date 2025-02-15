@@ -12,7 +12,7 @@ local Config = {
 ---get a description of the vehicle
 ---@param vehicle number
 ---@return string
-function GetVehicleDescription(vehicle)
+local function GetVehicleDescription(vehicle)
     if vehicle == 0 then
         return "unknown vehicle"
     end
