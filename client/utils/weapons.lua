@@ -1,0 +1,36 @@
+local WeaponNames = {
+    [`WEAPON_COMBATPISTOL`] = "Pistol",
+    [`WEAPON_PISTOL`] = "Pistol",
+    [`WEAPON_PISTOL_MK2`] = "Pistol Mk2",
+    [`WEAPON_APPISTOL`] = "AP Pistol",
+    [`WEAPON_SMG`] = "SMG",
+    [`WEAPON_ASSAULTRIFLE`] = "Assault Rifle",
+    [`WEAPON_ASSAULTRIFLE_MK2`] = "Assault Rifle Mk2",
+    [`WEAPON_CARBINERIFLE`] = "Carbine Rifle",
+    [`WEAPON_CARBINERIFLE_MK2`] = "Carbine Rifle Mk2",
+    [`WEAPON_BULLPUPRIFLE`] = "Bullpup Rifle",
+    [`WEAPON_BULLPUPRIFLE_MK2`] = "Bullpup Rifle Mk2",
+    [`WEAPON_SNIPERRIFLE`] = "Sniper Rifle",
+    [`WEAPON_HEAVYSNIPER`] = "Heavy Sniper",
+    [`WEAPON_HEAVYSNIPER_MK2`] = "Heavy Sniper Mk2",
+    [`WEAPON_SHOTGUN`] = "Shotgun",
+    [`WEAPON_AUTOSHOTGUN`] = "Assault Shotgun",
+    [`WEAPON_PUMPSHOTGUN`] = "Pump Shotgun",
+    [`WEAPON_SAWNOFFSHOTGUN`] = "Sawed-Off Shotgun",
+    [`WEAPON_MUSKET`] = "Musket",
+    [`WEAPON_RPG`] = "RPG",
+    [`WEAPON_GRENADELAUNCHER`] = "Grenade Launcher",
+    [`WEAPON_MINIGUN`] = "Minigun",
+    [`WEAPON_FIREEXTINGUISHER`] = "Fire Extinguisher",
+    [`WEAPON_STICKYBOMB`] = "Sticky Bomb",
+    [`WEAPON_MOLOTOV`] = "Molotov Cocktail",
+    [`WEAPON_BOTTLE`] = "Broken Bottle",
+    [`WEAPON_FLAREGUN`] = "Flare Gun",
+    [`WEAPON_VINTAGEPISTOL`] = "Vintage Pistol",
+    [`WEAPON_MARKSMANRIFLE`] = "Marksman Rifle",
+    [`WEAPON_MARKSMANRIFLE_MK2`] = "Marksman Rifle Mk2",
+}
+
+function GetWeaponLabel(hash)
+    return WeaponNames[hash] or "Weapon"
+end
