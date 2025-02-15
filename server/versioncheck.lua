@@ -26,7 +26,8 @@ PerformHttpRequest("https://api.github.com/repos/Maximus7474/lb-tablet-dispatch/
         (latestMajor == currentMajor and latestMinor > currentMinor) or 
         (latestMajor == currentMajor and latestMinor == currentMinor and latestPatch > currentPatch)
     then
-        print("[^5Version Check^7] Update available! Current: " .. currentVersion .. " | Latest: " .. latestVersion)
+        print(string.format("[^5Version Check^7] Update available! Current: %s | Latest: %s", currentVersion, latestVersion))
+        print(string.format("[^5Version Check^7] Download here: https://github.com/Maximus7474/lb-tablet-dispatch/releases/tag/v%s", latestVersion))
     else
         print("[^2Version Check^7] You are running the latest version: " .. currentVersion)
     end
