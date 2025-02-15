@@ -1,7 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
 
-version '0.2.0'
+version '0.3.0'
 
 author 'Maximus7474'
 repository 'https://github.com/Maximus7474/lb-tablet-dispatch'
