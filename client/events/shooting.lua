@@ -4,9 +4,9 @@ local timeout = 30 * 1000 --[[ 30 seconds ]]
 local GetGameTimer, PlayerPedId = GetGameTimer, PlayerPedId
 
 local Config = {
-    delay = 30, -- in seconds
+    delay = 20, -- in seconds
 
-    percentage = 50, -- percent chance the police should be notified
+    percentage = 60, -- percent chance the police should be notified
 
     excludedWeapons = { -- Won't trigger notifications
         [`WEAPON_STUNGUN`] = true,
@@ -19,7 +19,7 @@ local Config = {
         default = "10-13"
     },
 
-    copsCanTrigger = true,
+    copsCanTrigger = false,
     policeJobs = {"police"},
 }
 

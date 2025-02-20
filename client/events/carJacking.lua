@@ -4,9 +4,9 @@ local timeout = 30 * 1000 --[[ 30 seconds ]]
 local GetGameTimer = GetGameTimer
 
 local Config = {
-    delay = 10, -- in seconds
+    delay = 0, -- in seconds
 
-    percentage = 10, -- percent chance that the police are informed
+    percentage = 100, -- percent chance that the police are informed
 }
 
 ---get a description of the vehicle

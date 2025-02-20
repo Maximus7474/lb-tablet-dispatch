@@ -1,4 +1,5 @@
 local WeaponNames = {
+    [`WEAPON_UNARMED`] = "Fists",
     [`WEAPON_COMBATPISTOL`] = "Pistol",
     [`WEAPON_PISTOL`] = "Pistol",
     [`WEAPON_PISTOL_MK2`] = "Pistol Mk2",
