@@ -6,7 +6,10 @@ local GetGameTimer = GetGameTimer
 local Config = {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 <<<<<<< HEAD
@@ -102,6 +105,9 @@ end)
 
 =======
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -173,6 +179,10 @@ Citizen.CreateThread(function()
 end)
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> 15afb9c311c7ece9d18f0e06c0a03d812fb8e86a
+>>>>>>> Stashed changes
 =======
 >>>>>>> 15afb9c311c7ece9d18f0e06c0a03d812fb8e86a
 >>>>>>> Stashed changes
