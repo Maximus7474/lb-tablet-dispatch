@@ -19,7 +19,7 @@ local Config = {
         default = "10-13"
     },
 
-    copsCanTrigger = true,
+    copsCanTrigger = false,
     policeJobs = {"police"},
 }
 
