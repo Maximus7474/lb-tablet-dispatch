@@ -8,10 +8,6 @@ repository 'https://github.com/Maximus7474/lb-tablet-dispatch'
 
 dependancy 'lb-tablet'
 
-client_scripts {
-    '@qbx_core/modules/playerdata.lua',
-}
-
 client_script 'client/utils/*.lua'
 client_script 'client/bridge/*.lua'
 client_script 'client/events/*.lua'
