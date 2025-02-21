@@ -5,7 +5,10 @@ local GetGameTimer = GetGameTimer
 
 local Config = {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
     delay = 0, -- in seconds
     percentage = 100, -- percent chance that the police are informed
@@ -98,6 +101,9 @@ AddEventHandler('CEventMeleeAction', function()
 end)
 
 =======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     delay = 5,
     percentage = 35,
@@ -166,6 +172,10 @@ Citizen.CreateThread(function()
     end
 end)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> 15afb9c311c7ece9d18f0e06c0a03d812fb8e86a
+>>>>>>> Stashed changes
 =======
 >>>>>>> 15afb9c311c7ece9d18f0e06c0a03d812fb8e86a
 >>>>>>> Stashed changes
